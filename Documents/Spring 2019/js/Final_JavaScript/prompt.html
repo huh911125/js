@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+
+
+    <header>
+        <div id="logo">
+          <a href="index.html"><img src="data/images/logo_1.gif" alt="logo" width="220"></a>
+        </div>
+
+        <!-- The overlay -->
+
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+             <div class="overlay-content">
+                <p id="introEn"> This is a research project about cross-cultural <strong>small talk</strong>. Your participation will be super helpful for my future anlysis.<br>
+                <br>
+
+                The content is inspired by the interview with 40 elderly people at Day center in Cardiff, United Kingdom that have been mentioned in the Jounel Article<strong></strong> "'How Are You?': Negotiating Phatic Communion"</strong>, which is wrriten by Justine Coupland, Nikolas Coupland and Jeffrey D. Robinson<p>
+            </div>
+
+        </div>
+
+        <!-- Use any element to show the overlay navigation menu -->
+        <span onclick="openNav()" id="about">What's This About?</span>
+
+    </header>
+
+
+<!-- form -->
+
+
+          <!-- The first scene -->
+          <div id="firstScene">
+
+              <form name="reCollector". action="#" id="reCollector">
+            <!--       <div id="scenario"><strong>scenario</strong>: you run into your professor in a elevator. He said...</div> -->
+                  <div class="prompt">
+                  <img src="data/images/prompt.png" width=" 711px" height="117px">
+                 </div>
+
+                  <input type="text" name="welcome_response" id="response" required-field placeholder="I would say... ">
+
+                  <!--hold the response in the browser -->
+                  <input type="submit" id="returnBtn" value="> return">
+              
+               </form>
+
+          </div>
+
+
+          <!-- The Second scene -->
+          <div id="secondScene" style="display: none;">
+
+          <form name="Demo" action="#" id="Demo">  
+            <div id="questionnaire">
+
+              <div id="Q1">
+                <h2>Are you international student?</h1>
+
+                <input type="radio" name="occupation" id="international student" value="international student">
+                <label for="international student">International student</label>
+                <input type="radio" name="occupation" id="domastic student" value="domastic student"> 
+                <label for="domastic student">Domestic Student</label>
+                <input type="radio" name="occupation" id="other" value="other"> 
+                <label for="other">Other</label>
+              </div>
+
+              <div id="Q2">
+                <h2>Are you Chinese? </h1>
+
+                <input type="radio" name="nationality" id="Chinese" value="Chinese"> 
+                <label for="Chinese">Chinese</label>
+                <input type="radio" name="nationality" id="Non-Chinese" value="Non-Chinese"> 
+                <label for="Non-Chinese">Non-Chinese</label>
+              </div>
+
+              <div id="Q3">
+                <h2>How long have you been living in U.S.?</h1>
+
+                <input type="radio" name="year" id="1" value="1">
+                <label for="1"> less than 1 year </label>
+                <input type="radio" name="year" id="4" value="4"> 
+                <label for="4"> 1 - 4 years </label>
+                <input type="radio" name="year" id="6" value="6"> 
+                <label for="6"> more than 4 years </label>
+              </div>
+
+            </div>
+            <!-- submit the responses and demographic info to the Firebase -->
+            <button type="submit" id="pushBtn" value="submit"> Submit</button>
+
+          </div> 
+        </form> 
+
+    <footer>
+        <div class="name">by Huimin(Nancy) Hu</div>
+        <div class="bottomRight">
+          <div id="next"><blink>Next Page</blink></div>
+          <a href="data.html"><button id="bottomBtn"><img src="data/images/next.svg" width="30px" height="30px"></button></a>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+
+
+
+

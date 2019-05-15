@@ -1,0 +1,447 @@
+
+/*...........................................universal style*/ 
+
+html{
+/*    font-family: 'Oxygen', sans-serif;*/
+    font-family: PingFang SC thin;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin:70px 100px 50px 100px;
+    background-color: white;
+}
+
+header{
+    position: absolute;
+    display: block;
+    top:0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    padding:100px 100px 20px 100px;
+}
+
+#logo{
+    width:20px;
+    height: 40px;
+    top:0px;
+    float: left;
+}
+
+#about{
+    float:right;
+    display:inline-block;
+    padding-top: 0;
+    font-family: PingFang SC regular;
+    font-size:23px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration: none;
+    color:black;
+}
+
+#about:hover{
+    text-decoration:line-through;
+    text-underline-position:0;
+}
+
+.nav{
+    display:block;
+    width:50px;
+    height: 40px;
+    position: relative;
+    float:right;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: PingFang SC semibold;
+}
+
+footer {
+    position: absolute;
+    position:fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding:0px 100px 80px 100px;
+
+}
+
+
+
+footer .name{
+    float:left;
+    font-size:15px;
+    line-height: 20px;
+    text-align: left;
+    padding-top: 50px;
+}
+
+
+footer .bottomRight {
+    display: inline-flex;
+    right:0px;
+    float:right;
+}
+
+#next {
+    font-family: PingFang SC semibold;
+    line-height: 70px;
+    display: block;
+    right:100px;
+    margin-right: 15px;
+    text-decoration: blink;
+
+}
+
+footer a{
+    display: block;
+    right:0px;
+    float:right;
+}
+
+#bottomBtn{
+    background-color: white;
+    border: .5px solid #8E8E93;
+    width:70px;
+    height: 70px;
+    padding: 20px;
+    text-decoration: none;
+    font-family: PingFang SC light;
+    border-radius: 70px;
+    transition: .1s ease-in-out;
+}
+
+#bottomBtn:hover{
+/*    background-color: black;*/
+    border:white;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+
+ul {
+    list-style: none;
+}
+
+/*...........................................index.html */
+
+#intro {
+    text-align: center;
+    margin-top: 25%;
+    font-size:100px;
+    font-family: PingFang SC semibold;
+    line-height: 110px;
+}
+
+/*...........................................prompt.html */
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0; /*slide from right to left*/
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0,); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 60px; /* from the top */
+  left: 20%;
+  width: 550px; /* 100% width */
+  text-align: left; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  color:white;
+}
+
+
+#introEn{
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 38px;
+    width:550px;
+}
+
+#introCh{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    width:550px;
+    padding-bottom: 50px;
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+
+}
+
+
+/*scene one */
+
+
+
+form {
+    width: 100%;
+    margin-top:180px;
+    font-family: PingFang SC thin;
+    font-size: 20px;
+}
+
+/*#scenario {
+    margin-left: 35%;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}*/
+
+.prompt{
+    padding-top: 170px;
+    width: 60%;
+    padding-bottom: 50px;
+    margin-left: 20%;
+}
+
+
+#response{
+    background-color: #EFEFF4;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    line-height: 25px;
+    font-size:15px;
+    padding:15px 20px 15px 20px;
+    border-radius: 35px;
+    border: 1px solid #EFEFF4;
+    margin-left: 30%;
+    margin-right: 20%;
+    width:50%;
+}
+
+
+#response::placeholder{
+    text-align: left;
+    color:#D1D1D6;
+}
+
+#response:hover{
+/*    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);*/
+    border-color: rgba(223,225,229,0);
+}
+
+#response:focus{
+/*    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);*/
+    border-color: rgba(223,225,229,0);
+}
+
+#returnBtn {
+    background-color: transparent;
+    color:#C7C7CC;
+    float: right;
+    padding:0;
+    z-index: 1;
+    text-align: right;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    border:none;
+    cursor: pointer;
+    width: 10%;
+    margin-top: -42px;
+    margin-right: 20%;
+
+}
+
+/*scene two */
+
+#questionnaire{
+    margin-top: 15%;
+    width: 50%;
+    margin-left:30%;/* questionnaire is placed at rigth 60% */
+}
+
+#questionnaire input[type="radio"] {
+    display: none;
+}
+
+#questionnaire label{
+    display:inline-block;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    line-height: 20px;
+/*    color:#8E8E93;*/
+    color:#D1D1D6;
+    background-color:white;
+    border:.5px solid #D1D1D6;
+    border-radius: 36px;
+    font-size: 15px;
+}
+
+#questionnaire label:hover {
+    background-color:#EFEFF4;
+    color:#8E8E93;
+}
+
+#questionnaire input[type="radio"]:checked + label {
+    background-color:white;
+    border-color: #000000;
+    color:black;
+    font-family:  PingFang SC regular;
+}
+
+
+#questionnaire h1{
+    width: 530px;
+    margin-bottom: 50px;
+}
+
+#pushBtn {
+    margin-top: 50px;
+    float:left;
+    font-size:15px;
+    color:#8E8E93;
+    background-color: black;
+    padding:10px 20px 10px 20px;
+    border:.5px solid #000000;
+    border-radius: 5px;
+    margin-left:30%;
+
+}
+
+#pushBtn:hover{
+    color:white;
+ 
+}
+
+
+
+/*...........................................data.html */
+#key {
+    margin-top: 150px; 
+    width: 30%;
+    display: inline-block;
+    font-size:13px;
+}
+
+#reTitle {
+    font-size: 50px;
+    line-height: 50px;
+    padding-bottom: 70px;
+    font-family:PingFang SC semibold;
+    color:transparent;
+}
+
+#line {
+    margin-right:100px;
+    text-align:left;
+}
+
+#rectangle1 {
+    margin-top: 10px;
+    background-color: #C7C7CC;
+    height: 10px;
+    width: 10px;
+    border: #C7C7CC;
+    border-radius: 2px;
+}
+
+#rectangle2 {
+    margin-top: 10px;
+    background-color: #8E8E93;
+    height: 10px;
+    width: 10px;
+    border: #8E8E93;
+    border-radius: 2px;
+}
+
+#rectangle3 {
+    margin-top: 10px;
+    background-color: black;
+    height: 10px;
+    width: 10px;
+    border: black;
+    border-radius: 2px;
+}
+
+
+.pulledData {
+    display: inline-block;
+    float: right;
+    width: 70%;
+    font-size: 30px;
+    font-family: PingFang SC semibold;
+    margin-top:30px;
+}
+
+#international {
+    width: 45%;
+    float: left;
+    padding-right: 10%;
+}
+
+#domestic {
+    width: 45%;
+    float: left;
+}
+
+.DemoTitle {
+    margin-bottom: 25px;
+    font-size:15px;
+}
+
+.pulledData ul{
+    padding:0px;
+}
+
+#responseList_Inter_Ch_1 {
+    color: #C7C7CC;
+}
+
+#responseList_Inter_Ch_4 {
+    color: #8E8E93;
+}
+
+/*...........................................obervation.html */
+
+.obervation {
+    padding: 5% 23% 10% 30%;
+}
